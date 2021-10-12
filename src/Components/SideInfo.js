@@ -3,6 +3,12 @@ import profileImg from "../download.jpeg";
 function SideInfo() {
   return (
     <div className="side-info">
+      <section class="move-area">
+        <div class=".container">
+          <div class="eye"></div>
+          <div class="eye"></div>
+        </div>
+      </section>
       <img src={profileImg} />
       <p>
         Charles Francis Xavier was born the son of nuclear researcher Brian

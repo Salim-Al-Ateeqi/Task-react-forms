@@ -2,7 +2,7 @@ import React from "react";
 import SideInfo from "./SideInfo";
 import { useState } from "react";
 
-function Form() {
+function Form({ createStudent }) {
   const [info, setInfo] = useState({
     name: "",
     lastName: "",
@@ -12,12 +12,12 @@ function Form() {
   });
 
   const handleChange = (e) => {
-    setInfo({ ...info, [e.target.name]: e.target.value });
+    setInfo({ ...info, id: 1, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(info);
+    createStudent(info);
   };
   return (
     <div className="form-page">

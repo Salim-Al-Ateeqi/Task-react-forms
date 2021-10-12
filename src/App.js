@@ -9,20 +9,22 @@ function App() {
   const [show, setShow] = useState(false);
 
   const createStudent = (newStudent) => {
+    const id = studentsInfo.length + 1;
+    const studentID = { ...newStudent, id: id };
+    setStudentsInfo([...studentsInfo, studentID]);
     console.log(newStudent);
-    setStudentsInfo([...studentsInfo, newStudent]);
   };
 
-  // const deleteStudent = (id) => {
-  //   let tempStudent = studentsInfo.filter((student) => student.id !== id);     //The delete code I will activate it after I render the Attendees
-  //   setStudentsInfo(tempStudent);
-  // };
+  const deleteStudent = (id) => {
+    let tempStudent = studentsInfo.filter((student) => student.id !== id);
+    setStudentsInfo(tempStudent);
+  };
 
   return (
     <div className="App">
       <HeaderAndTitle showList={setShow} show={show} />
       {show ? (
-        <StudentsList list={studentsInfo} />
+        <StudentsList list={studentsInfo} deleteStudent={deleteStudent} />
       ) : (
         <Form createStudent={createStudent} />
       )}
