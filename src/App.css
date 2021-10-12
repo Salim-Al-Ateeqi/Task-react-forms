@@ -1,4 +1,8 @@
-header{
+body {
+  background-color: white;
+}
+
+header {
   margin: 10px;
   padding: 5px;
   display: flex;
@@ -6,48 +10,55 @@ header{
   height: 50px;
 }
 
-header img{
+header img {
   object-fit: contain;
   width: 100px;
 }
 
-.title{
+.title {
   padding: 5px;
   height: 88px;
   text-align: center;
   background-color: #8080806e;
 }
 
-.form-page{
+.form-page {
   display: flex;
 }
-.form-page form{
-  width: 70%;
+
+.form-page form {
+  display: flex-box;
+  flex-flow: wrap;
+  padding: 5px;
+  height: 100%;
+  width: 150px;
+  margin-left: 5vw;
+  margin-right: auto;
 }
-.side-info{
-  margin:15px;
+.side-info {
+  margin: 15px;
   background-color: rgba(136, 170, 173, 0.479);
   padding: 50px;
   width: 30%;
 }
 
-.title p:hover{
+.title p:hover {
   cursor: pointer;
-  color:white;
+  color: white;
 }
 
-.student{
+.student {
   display: flex;
   border-radius: 8px;
-  border:2px solid gray;
-  margin:15px;
+  border: 2px solid gray;
+  margin: 15px;
   padding: 10px;
   width: 50%;
 }
 
-.delete{
-  margin-top:25px;
-  color:red;
-  margin-left:50%;
+.delete {
+  margin-top: 25px;
+  color: red;
+  margin-left: 50%;
   cursor: pointer;
 }
